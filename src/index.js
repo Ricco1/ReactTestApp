@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { images, fetching, notifications } from "./reducers";
 import {
   createStore,
   combineReducers,
@@ -24,6 +25,7 @@ const createStoreWithMiddleware = compose(
 )(createStore);
 const reducer = combineReducers({
 // key: reducer function here
+    images, isFetching: fetching, notifications
 });
 const store = createStoreWithMiddleware(reducer);
 
